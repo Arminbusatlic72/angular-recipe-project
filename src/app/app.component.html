@@ -6,6 +6,13 @@
       <app-shopping-list
         *ngIf="selectedFeature !== 'recipe'"
       ></app-shopping-list>
+      <p
+        directiveAddClass
+        [defaultColor]="'transparent'"
+        [highlightColor]="'red'"
+      >
+        Hello
+      </p>
     </div>
   </div>
 </div>
