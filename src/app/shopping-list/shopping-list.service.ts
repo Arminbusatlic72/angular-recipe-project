@@ -13,8 +13,15 @@ export class ShoppingListService {
 getIngredients() {
     return this.ingredients.slice();
   }
-addIngredient(ingredient: Ingredient) {
-this.ingredients.push(ingredient)
+addIngredient(ingredient: any) {
+
+  if(this.ingredients.some(i => i.name == ingredient.name)) {
+    const sameItem: any = this.ingredients.find(i => i.name == ingredient.name);
+    sameItem.number= parseInt(sameItem.number) + parseInt(ingredient.number)
+  } else {
+    this.ingredients.push(ingredient)
+  }
+
 this.ingredientsChanged.emit(this.ingredients.slice())
 
 }
