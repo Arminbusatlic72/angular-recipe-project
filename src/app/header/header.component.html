@@ -1,25 +1,31 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Recipe book</a>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="navbar-brand"
+        >Recipe book</a
+      >
     </div>
     <div class="colapse navbar-colapse">
       <ul class="nav navbar-nav">
-        <li>
-          <a href="#" (click)="onSelect('recipe')">Recipes</a>
+        <li routerLinkActive="active">
+          <a routerLink="/recipes">Recipes</a>
         </li>
-        <li>
-          <a href="#" (click)="onSelect('shopping-list')">Shopping list</a>
+        <li routerLinkActive="active">
+          <a routerLink="/shopping-list">Shopping list</a>
         </li>
       </ul>
       <ul class="nav navabar-colapse navbar-right">
         <li class="dropdown" appDropdown>
-          <a class="dropdown-toggle" role="button"
+          <a style="cursor: pointer" class="dropdown-toggle" role="button"
             >Menu<span class="caret"></span
           ></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Fetching data</a></li>
-            <li><a href="#">Save data</a></li>
+            <li><a style="cursor: pointer">Fetching data</a></li>
+            <li><a style="cursor: pointer">Save data</a></li>
           </ul>
         </li>
       </ul>

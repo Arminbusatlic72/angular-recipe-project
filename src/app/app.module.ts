@@ -14,15 +14,17 @@ import { FormsModule } from '@angular/forms';
 import { AddClassDirective } from './directives/add-class.directive';
 import { DropdownDirective } from './directives/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, RecipesComponent, RecipesListComponent, RecipesDetailsComponent, RecipesItemComponent, ShoppingListComponent, ShoppingEditComponent, AddClassDirective, DropdownDirective
+    AppComponent, HeaderComponent, RecipesComponent, RecipesListComponent, RecipesDetailsComponent, RecipesItemComponent, ShoppingListComponent, ShoppingEditComponent, AddClassDirective, DropdownDirective, RecipeStartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

@@ -13,11 +13,11 @@ export class ShoppingListService {
 getIngredients() {
     return this.ingredients.slice();
   }
-addIngredient(ingredient: any) {
+addIngredient(ingredient: Ingredient) {
 
-  if(this.ingredients.some(i => i.name == ingredient.name)) {
-    const sameItem: any = this.ingredients.find(i => i.name == ingredient.name);
-    sameItem.number= parseInt(sameItem.number) + parseInt(ingredient.number)
+  if(this.ingredients.some(i => i.name === ingredient.name)) {
+    const sameItem: any = this.ingredients.find(i => i.name == ingredient.name );
+    sameItem.number= Number(sameItem.number) + Number(ingredient.number)
   } else {
     this.ingredients.push(ingredient)
   }

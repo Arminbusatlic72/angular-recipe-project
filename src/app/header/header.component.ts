@@ -1,7 +1,5 @@
 import {
-Component,
-EventEmitter,
-Output
+Component
 } from "@angular/core";
 @Component({
   selector: 'app-header',
@@ -9,8 +7,5 @@ Output
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-@Output() featureSelect = new EventEmitter<string>();
- onSelect (url:string) {
- this.featureSelect.emit(url)
- }
+
 }
