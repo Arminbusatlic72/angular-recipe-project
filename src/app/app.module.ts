@@ -15,10 +15,11 @@ import { AddClassDirective } from './directives/add-class.directive';
 import { DropdownDirective } from './directives/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, RecipesComponent, RecipesListComponent, RecipesDetailsComponent, RecipesItemComponent, ShoppingListComponent, ShoppingEditComponent, AddClassDirective, DropdownDirective, RecipeStartComponent
+    AppComponent, HeaderComponent, RecipesComponent, RecipesListComponent, RecipesDetailsComponent, RecipesItemComponent, ShoppingListComponent, ShoppingEditComponent, AddClassDirective, DropdownDirective, RecipeStartComponent, RecipeEditComponent
   ],
   imports: [
     BrowserModule,
